@@ -5,7 +5,7 @@ const feedbackFormEl = document.querySelector('.feedback-form');
 
 const userData = {};
 
-fromStorageToInput = () => { 
+const fromStorageToInput = () => { 
     const dataFormLocStor = JSON.parse(localStorage.getItem('feedback-form-state'));
 
     if (dataFormLocStor === null) { 
