@@ -2,7 +2,7 @@
 import throttle from 'lodash.throttle';
  
 const feedbackFormEl = document.querySelector('.feedback-form');
-console.log(feedbackFormEl)
+//console.log(feedbackFormEl)
 const userData = {};
 
 fromStorageToInput = () => { 
