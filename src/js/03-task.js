@@ -14,7 +14,10 @@ const fromStorageToInput = () => {
 
     for (const key in dataFormLocStor) { 
         if (dataFormLocStor.hasOwnProperty(key)) {
-           feedbackFormEl.elements[key].value = dataFormLocStor[key];
+          feedbackFormEl.elements[key].value = dataFormLocStor[key];
+          if (dataFormLocStor[key]) { 
+            userData[key]=dataFormLocStor[key]
+          }
        }
     }
     
@@ -27,8 +30,6 @@ const onFeedbackFormElChange = ({ target: feedbackFormField}) => {
 
     userData[email] = message;
    
-
-
     localStorage.setItem('feedback-form-state', JSON.stringify(userData));
 
 }
